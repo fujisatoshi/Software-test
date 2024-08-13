@@ -52,3 +52,4 @@ jobs:
         name: JUnit Tests
         path: target/surefire-reports/TEST-*.xml
         reporter: junit
+
