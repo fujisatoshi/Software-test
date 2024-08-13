@@ -45,11 +45,11 @@ jobs:
         name: jacoco-report
         path: target/site/jacoco/
 
-    - name: Publish JUnit Test Results
+    - name: Archive JUnit Test Results
       if: always()
-      uses: dorny/test-reporter@v1
+      uses: actions/upload-artifact@v3
       with:
-        name: JUnit Tests
+        name: junit-test-results
         path: target/surefire-reports/TEST-*.xml
-        reporter: junit-xml
+
 
