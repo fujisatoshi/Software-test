@@ -22,7 +22,12 @@ public class SimpleCalculator {
                 }
                 break;
             case '%':
+                if (num2 != 0) {
                     result = num1 % num2;
+                } else {
+                    System.out.println("除数不能为0");
+                    result = Double.POSITIVE_INFINITY; // 或者返回一个错误码
+                }
                 break;
             default:
                 System.out.println("无效的运算符");
@@ -61,7 +66,12 @@ public class SimpleCalculator {
                 }
                 break;
             case "%":
+                if (num2 != 0) {
                     result = num1 % num2;
+                } else {
+                    System.out.println("除数不能为0");
+                    return;
+                }
                 break;
             default:
                 System.out.println("无效的运算符");
